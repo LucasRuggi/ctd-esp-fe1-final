@@ -30,6 +30,7 @@ const initialState: PersonajesState = {
  * @returns {State} un estado
  */
 
+
 const personajesReducer: Reducer<PersonajesState, PersonajesAction> =
     (state = initialState, action): PersonajesState => {
         switch (action.type) {
