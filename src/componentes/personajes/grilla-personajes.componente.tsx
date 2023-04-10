@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
-import {
-    useDispatch,
-} from "react-redux";
+import {useDispatch} from "react-redux";
 import { searchCharactersThunks } from '../../redux/actions/personajes.actions';
 import { useSelector } from '../../redux/store';
 import Personaje from '../../types/characters.types';
@@ -21,16 +19,13 @@ interface Props {
     listaPersonajes: Personaje[]
 }
  const GrillaPersonajes = ({ listaPersonajes}: Props) => {
-
     const { favoritos } = useSelector((state) => state.personajes);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(searchCharactersThunks(""));
     }, [dispatch]);
-
-   
-
+    
     if (!listaPersonajes || listaPersonajes.length === 0) return <div>No se encontraron personajes</div>
 
     return <div className="grilla-personajes">

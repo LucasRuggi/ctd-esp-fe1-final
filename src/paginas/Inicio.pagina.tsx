@@ -16,15 +16,11 @@ import { useSelector } from "../redux/store";
  * @returns {React.ReactElement} la pagina de inicio
  */
 const PaginaInicio: FC = () => {
-
-
     const dispatch = useDispatch()
     const { personajes } = useSelector((state) => state.personajes);
-
     const eliminarFiltro = () => {
         dispatch(searchCharactersThunks(""))
     }
-
     return <div className="container">
         <div className="actions">
             <h3>Catálogo de Personajes</h3>

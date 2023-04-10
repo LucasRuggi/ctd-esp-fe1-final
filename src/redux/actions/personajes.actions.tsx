@@ -110,7 +110,6 @@ export interface RemoveTodoFavoritosAction extends Action {
 
 export interface SearchCharactersThunks extends ThunkAction<void, IRootState, unknown, PersonajesAction> {
 }
-
 export const searchCharactersThunks = (name: string): SearchCharactersThunks => {
     return async (dispatch) => {
         dispatch(getPersonajes(name))

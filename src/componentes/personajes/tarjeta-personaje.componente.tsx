@@ -24,7 +24,6 @@ interface ITarjeta {
 const TarjetaPersonaje = ({ favoritos, image, nombre, personaje }: ITarjeta) => {
 
     const [isFavorite, setIsFavorite] = useState<boolean>(false);
-
     useEffect(() => {
         if (favoritos.includes(personaje)) {
             setIsFavorite(true);
@@ -45,7 +44,6 @@ const TarjetaPersonaje = ({ favoritos, image, nombre, personaje }: ITarjeta) => 
             <BotonFavorito esFav={esFav} personaje={personaje} esFavorito={isFavorite} onClick={setIsFavorite} />
         </div>
     </div>
-
 }
 
 export default TarjetaPersonaje;

@@ -19,15 +19,12 @@ const Paginacion: FC = () => {
         estado.personajes.pageInfo);
 
     const { next, prev } = pageInfo;
-
     const paginaAnterior = () => {
         dispatch(changePageThunk(prev));
     };
-
     const paginaPosterior = () => {
         dispatch(changePageThunk(next));
     };
-
     return (
     <div className="paginacion">
         <button onClick={paginaAnterior} disabled={prev === null ? true : false} className={"primary"}>Anterior</button>

@@ -12,7 +12,6 @@ export interface PersonajesState {
     error: string | null,
     favoritos: Personaje[],
 }
-
 const initialState: PersonajesState = {
     busqueda: '',
     status: "idle",
@@ -21,7 +20,6 @@ const initialState: PersonajesState = {
     error: null,
     favoritos: [],
 };
-
 /**
  * Funciones reductora de los personajes
  * 
@@ -29,8 +27,6 @@ const initialState: PersonajesState = {
  * @param {DataStore.Reducer<PersonajesState, PersonajesAction>} action 
  * @returns {State} un estado
  */
-
-
 const personajesReducer: Reducer<PersonajesState, PersonajesAction> =
     (state = initialState, action): PersonajesState => {
         switch (action.type) {
@@ -65,14 +61,14 @@ const personajesReducer: Reducer<PersonajesState, PersonajesAction> =
                     personajes: [],
                     error: null
                 }
-            case "IS_SUCCESS_PERSONAJES":
-                return {
-                    ...state,
-                    status: "success",
-                    personajes: action.payload.personajes,
-                    pageInfo: action.payload.pageInfo,
-                    error: null
-                }
+                case "IS_SUCCESS_PERSONAJES":
+                    return {
+                        ...state,
+                        status: "success",
+                        personajes: action.payload.personajes,
+                        pageInfo: action.payload.pageInfo,
+                        error: null
+                    }
             case "REMOVE_TODO_FAVORITOS":
                 return {
                     ...state,

@@ -37,9 +37,7 @@ const BotonFavorito = ({esFavorito, onClick, personaje, esFav }: Props & onClick
             onClick(!esFavorito);
         }
     }
-
     const src = esFav === true ? "/imagenes/star-filled.png" : "/imagenes/star.png"
-
     return <div onClick={() => handleFavorito()} className="boton-favorito">
         <img src={src} alt={"favorito"} />
     </div>

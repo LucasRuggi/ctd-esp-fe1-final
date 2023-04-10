@@ -15,7 +15,6 @@ import { removeTodoFavoritos } from "../redux/actions/personajes.actions";
 const PaginaFavoritos : FC =  () => {
 
     const dispatch = useDispatch();
-
     const { favoritos } = useSelector((state) => state.personajes);
 
     useEffect(()=>{
